@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/webhook", async (req, res) => {
+app.post("/webhook", async (req, res) => {
   const axios = require("axios");
   console.log(req.body);
   try {
